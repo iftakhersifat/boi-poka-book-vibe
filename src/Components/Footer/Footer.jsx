@@ -8,9 +8,9 @@ const Footer = () => {
   <div>
   <h1 className="text-[28px] font-bold">Book Vibe</h1>
   <ul className="flex text-center">
-    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/'}><a>Home</a></Link>
-    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/listedBooks'}><a>Listed Books</a></Link>
-    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/read'}><a>Pages to Read</a></Link>
+    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/'}>Home</Link>
+    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/listedBooks'}>Listed Books</Link>
+    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/read'}>Pages to Read</Link>
     </ul>
     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
   </div>
