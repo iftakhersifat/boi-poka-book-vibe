@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 
 const Book = ({data}) => {
@@ -13,7 +14,7 @@ const Book = ({data}) => {
   <div className="card-body">
   <div className='flex text-[#23BE0A] mb-4 space-x-3'>
     {
-        tags.map(tag=><p className='bg-green-50 rounded-lg p-3'>{tag}</p>)
+        tags.map((tag, index)=><p className='bg-green-50 rounded-lg p-3' key={index}>{tag}</p>)
     }
   </div>
     <h2 className="card-title">{bookName}
@@ -23,7 +24,7 @@ const Book = ({data}) => {
     <div className='border-t-1 border-dashed border-gray-400'></div>
     <div className="flex justify-between">
       <div className="">Fiction</div>
-      <div className="">{rating}</div>
+      <div className="flex gap-2">{rating} <Star size={20}></Star></div>
     </div>
   </div>
 </div>
