@@ -7,10 +7,10 @@ const Home = () => {
     const booksData = useLoaderData();
     console.log(booksData)
     return (
-        <div>
+        <div className=''>
             <Banner></Banner>
             <h1 className='text-[28px] font-bold text-center mb-8'>Books</h1>
-            <div>
+            <div className='grid grid-cols-3 mb-10 px-22'>
                 {
                     booksData.map(data=><Book key={data.bookId} data={data}></Book>)
                 }

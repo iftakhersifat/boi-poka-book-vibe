@@ -4,20 +4,18 @@ const Book = ({data}) => {
     const {image, bookName, author, tags, rating} = data;
     return (
         <div className="card bg-base-100 w-96 shadow-sm container mx-auto">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
+  <figure className='bg-gray-200 h-[240px] p-2'>
+    <img className='w-[140px] h-[140px] rounded-lg' src={image} alt="" />
   </figure>
   <div className="card-body">
-    <h2 className="card-title">
-      Card Title
+    <h2 className="card-title">{bookName}
       <div className="badge badge-secondary">NEW</div>
     </h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div>
-      <div className="badge badge-outline">Products</div>
+    <p>By : {author}</p>
+    <div className='border-t-1 border-dashed border-gray-400'></div>
+    <div className="flex justify-between">
+      <div className="">Fiction</div>
+      <div className="">{rating}</div>
     </div>
   </div>
 </div>
