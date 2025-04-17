@@ -13,6 +13,12 @@ const router = createBrowserRouter([
     path: "/",
     Component: Root
   },
+
+  // error show
+  {
+    path: "*",
+    element: <p className='text-center m-96 font-bold text-2xl'>404 error : not found</p>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
