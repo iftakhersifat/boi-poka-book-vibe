@@ -12,11 +12,10 @@ import Home from './Components/Home/Home.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: Root
-  },
-  {
-    path: "/home",
-    Component: Home
+    Component: Root,
+    children: [
+      {index: true, Component: Home}
+    ],
   },
 
   // error show
