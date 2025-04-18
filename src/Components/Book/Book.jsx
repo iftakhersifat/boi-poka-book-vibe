@@ -4,7 +4,7 @@ import React from 'react';
 const Book = ({data}) => {
     const {image, bookName, author, tags, rating} = data;
     return (
-        <div className="card bg-base-100 w-96 shadow-sm container mx-auto">
+        <div className="card bg-base-100 lg:w-96 md:w-88 shadow-sm container mx-auto">
   <div className='p-4 rounded-lg'>
   <figure className='bg-gray-200 h-[240px] p-2'>
     <img className='w-[140px] h-[140px] rounded-lg' src={image} alt="" />
