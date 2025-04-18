@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { addBook } from '../Utility/utility';
+import { Star } from 'lucide-react';
 
 const BooksDetails = () => {
     const { id } = useParams();
@@ -68,7 +69,7 @@ const BooksDetails = () => {
                         </tr>
                         <tr>
                             <td className="text-gray-500 font-semibold py-2">Ratings</td>
-                            <td className="font-bold text-black py-2">{rating}</td>
+                            <td className="font-bold text-black py-2 flex gap-2">{rating} <Star size={20}></Star></td>
                         </tr>
                     </tbody>
                 </table>
