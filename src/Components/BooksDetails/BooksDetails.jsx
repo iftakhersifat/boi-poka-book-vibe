@@ -27,12 +27,12 @@ const BooksDetails = () => {
     const { bookName, image, author, review, tags, totalPages, publisher, yearOfPublishing, rating } = bookDetails;
 
     return (
-        <div className='container mx-auto mt-8 mb-8 flex justify-between gap-8'>
-            <div className='bg-gray-200 rounded-lg h-[700px] w-[50%] flex justify-center items-center'>
+        <div className='container mx-auto mt-8 mb-8 md:flex justify-between gap-8 p-4 md:p-0'>
+            <div className='bg-gray-200 rounded-lg lg:h-[700px] md:h-[865px] md:w-[50%] flex justify-center items-center'>
                 <img className='w-[450px] p-4' src={image} alt={bookName} />
             </div>
 
-            <div className='w-[50%]'>
+            <div className='md:w-[50%] p-4 md:p-0'>
                 <h1 className='font-bold text-4xl mb-4'>{bookName}</h1>
                 <p className="mb-4 text-xl text-gray-500 font-bold">By : {author}</p>
                 <div className='border-b-2 border-gray-400 my-4'></div>
