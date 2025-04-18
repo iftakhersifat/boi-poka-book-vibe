@@ -1,9 +1,11 @@
 import { Star } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router';
 
 const Book = ({data}) => {
-    const {image, bookName, author, tags, rating} = data;
+    const {image, bookName, author, tags, rating,bookId} = data;
     return (
+        <Link to={`/bookDetails/${bookId}`}>
         <div className="card bg-base-100 lg:w-96 md:w-88 shadow-sm container mx-auto">
   <div className='p-4 rounded-lg'>
   <figure className='bg-gray-200 h-[240px] p-2'>
@@ -27,7 +29,7 @@ const Book = ({data}) => {
       <div className="flex gap-2">{rating} <Star size={20}></Star></div>
     </div>
   </div>
-</div>
+</div></Link>
     );
 };
 

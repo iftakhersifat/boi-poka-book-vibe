@@ -13,6 +13,7 @@ const Navbar = () => {
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A]' to={'/'}>Home</Link>
+        <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A]' to={'/home'}>About</Link>
         <Link to={'/listedBooks'}>Listed Books</Link>
         <Link to={'/read'}>Pages to Read</Link>
         
@@ -23,6 +24,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/'}>Home</Link>
+    <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/about'}>About</Link>
     <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/listedBooks'}>Listed Books</Link>
     <Link className='hover:border-2 hover:border-[#23BE0A] hover:text-[#23BE0A] hover:rounded-lg hover:p-3 p-3' to={'/read'}>Pages to Read</Link>
     </ul>
