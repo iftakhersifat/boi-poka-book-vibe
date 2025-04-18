@@ -26,8 +26,9 @@ const BooksDetails = () => {
                     tags.map((tag, index)=> <p key={index} className='font-bold gap-8 text-[#23BE0A] bg-green-50 rounded-xl px-3'>#{tag}</p>)
                 }
             </div></h1>
-            <p className='border-b-1 border-gray-400 mt-4 mb-4'></p>
+            <p className='border-b-1 border-gray-400 mt-6 mb-4'></p>
 
+            {/* make table */}
             <table className="w-full text-left">
             <tbody>
               <tr>
@@ -48,6 +49,11 @@ const BooksDetails = () => {
               </tr>
             </tbody>
             </table>
+
+                <div className='mt-9'>
+                <button className="btn bg-white text-black rounded-lg mr-6 px-7 py-7">Read</button>
+                <button className="btn bg-[#59C6D2] text-white rounded-lg px-7 py-7">Wishlist</button>
+                </div>
 
             </div>
         </div>
