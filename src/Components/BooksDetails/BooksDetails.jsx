@@ -7,7 +7,7 @@ const BooksDetails = () => {
     const details =useLoaderData();
     // console.log(details)
     const bookDetails = details.find(book => book.bookId === bookId);
-    const {bookName, image, author, review, tags} =bookDetails
+    const {bookName, image, author, review, tags, totalPages, publisher, yearOfPublishing, rating} =bookDetails
     return (
         <div className='container mx-auto mt-8 mb-8 flex justify-between gap-8'>
             <div className='bg-gray-200 rounded-lg h-[700px] w-[50%] flex justify-center items-center'>
@@ -27,6 +27,28 @@ const BooksDetails = () => {
                 }
             </div></h1>
             <p className='border-b-1 border-gray-400 mt-4 mb-4'></p>
+
+            <table className="w-full text-left">
+            <tbody>
+              <tr>
+                <td className="text-gray-500 font-semibold py-2">Number of Pages</td>
+                <td className="font-bold text-black py-2">{totalPages}</td>
+              </tr>
+              <tr>
+                <td className="text-gray-500 font-semibold py-2">Publisher</td>
+                <td className="font-bold text-black py-2">{publisher}</td>
+              </tr>
+              <tr>
+                <td className="text-gray-500 font-semibold py-2">Year Of Publishing</td>
+                <td className="font-bold text-black py-2">{yearOfPublishing}</td>
+              </tr>
+              <tr>
+                <td className="text-gray-500 font-semibold py-2">Ratings</td>
+                <td className="font-bold text-black py-2">{rating}</td>
+              </tr>
+            </tbody>
+            </table>
+
             </div>
         </div>
     );
