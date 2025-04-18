@@ -16,16 +16,15 @@ const router = createBrowserRouter([
     path: "/",
     Component: Root,
     children: [
-      {index: true,
-       loader: ()=>fetch("booksData.json"), 
+      {index: true, 
        Component: Home},
        {
         path: "/about",
-      Component:About
+        Component:About
       },
       {
         path: "/bookDetails/:id",
-        loader: ()=>fetch("booksData.json"), 
+        
         Component:BooksDetails
       },
     ],

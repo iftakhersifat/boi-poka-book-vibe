@@ -14,9 +14,9 @@ const Book = ({data}) => {
   </div>
   
   <div className="card-body">
-  <div className='flex text-[#23BE0A] mb-4 space-x-3'>
+  <div className='flex mb-4 space-x-12'>
     {
-        tags.map((tag, index)=><p className='bg-green-50 rounded-lg p-3' key={index}>{tag}</p>)
+        tags.map((tag, index)=><p className='font-bold gap-8 text-[#23BE0A] bg-green-50 rounded-xl px-3' key={index}>{tag}</p>)
     }
   </div>
     <h2 className="card-title">{bookName}
