@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useLoaderData, useParams } from 'react-router';
 import { addBook } from '../Utility/utility';
 import { Star } from 'lucide-react';
 import { addWishlist } from '../Utility/Wishlist';
 
 const BooksDetails = () => {
+
+   
     const { id } = useParams();
     const bookId = parseInt(id);
     const [details, setDetails] = useState([]);

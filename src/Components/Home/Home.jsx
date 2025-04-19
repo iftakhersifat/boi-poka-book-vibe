@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import Book from '../Book/Book';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
-    const [booksData, setBooksData] = useState([]);
+    const booksData =useLoaderData();
+    console.log(booksData)
 
-    useEffect(() => {
-        // Manually fetching data
-        fetch('booksData.json')
-            .then((response) => response.json())
-            .then((data) => setBooksData(data));
-    }, []);
+    // const [booksData, setBooksData] = useState([]);
+
+    // useEffect(() => {
+    //     // Manually fetching data
+    //     fetch('booksData.json')
+    //         .then((response) => response.json())
+    //         .then((data) => setBooksData(data));
+    // }, []);
 
     // Show loading until data is fetched
     if (booksData.length === 0) {
