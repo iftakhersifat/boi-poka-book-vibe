@@ -36,7 +36,7 @@ const ListedBooks = () => {
     </TabPanel>
 
     <TabPanel>
-      <h2>Wishlist Books</h2>
+      <h2>Wishlist Books </h2>
     </TabPanel>
   </Tabs>
        </div>

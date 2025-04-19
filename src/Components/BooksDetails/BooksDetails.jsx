@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { addBook } from '../Utility/utility';
 import { Star } from 'lucide-react';
+import { addWishlist } from '../Utility/Wishlist';
 
 const BooksDetails = () => {
     const { id } = useParams();
@@ -22,7 +23,11 @@ const BooksDetails = () => {
 
 
     const handelRead=(id)=>{
-        addBook(id)
+        addBook(id);
+        
+    }
+    const handelWishlist =(id)=>{
+        addWishlist(id)
     }
 
     const { bookName, image, author, review, tags, totalPages, publisher, yearOfPublishing, rating } = bookDetails;
@@ -76,7 +81,7 @@ const BooksDetails = () => {
 
                 <div className='mt-9'>
                     <button onClick={()=>handelRead(id)} className="btn bg-white text-black rounded-lg mr-6 px-7 py-7">Read</button>
-                    <button className="btn bg-[#59C6D2] text-white rounded-lg px-7 py-7">Wishlist</button>
+                    <button onClick={()=>handelWishlist(id)} className="btn bg-[#59C6D2] text-white rounded-lg px-7 py-7">Wishlist</button>
                 </div>
             </div>
         </div>
