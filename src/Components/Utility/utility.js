@@ -20,4 +20,4 @@ const addBook = id =>{
         localStorage.setItem("read", data)
     }
 }
-export {addBook}
+export {addBook, getBook}
