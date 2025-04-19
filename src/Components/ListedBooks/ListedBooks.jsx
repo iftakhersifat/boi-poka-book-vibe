@@ -4,9 +4,12 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getBook } from '../Utility/utility';
 import Book from '../Book/Book';
+import { getWishlist } from '../Utility/Wishlist';
 
 const ListedBooks = () => {
   const [read, setRead]=useState([]);
+
+  const [Wishlist, setWishlist]=useState([]);
 
   const useData = useLoaderData();
   // console.log(useData);
@@ -17,6 +20,13 @@ const ListedBooks = () => {
     console.log(showBook)
     const readList = useData.filter(book=>showBook.includes(book.bookId));
     setRead(readList);
+
+
+    // for wishlist
+    const storeList =getWishlist();
+    const convertWishList = storeList.map(id=>parseInt(id));
+    const wishList = useData.filter(list=>convertWishList.includes(list.bookId));
+    setWishlist(wishList);
   },[])
     return (
        <div className='container mx-auto mt-8 mb-8 p-4 md:p-0'>
@@ -36,7 +46,12 @@ const ListedBooks = () => {
     </TabPanel>
 
     <TabPanel>
-      <h2>Wishlist Books </h2>
+      <h2>Wishlist Books {Wishlist.length}</h2>
+      <div>
+        {
+          Wishlist.map(l=><Book key={l.bookId} data={l}></Book>)
+        }
+      </div>
     </TabPanel>
   </Tabs>
        </div>
